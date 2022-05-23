@@ -33,4 +33,12 @@ class Square {
 13. Zapewnić domyślną implementację metody `getDiameter()`
     - Implementacja powinna sprawdzać po kolei czy dane `Shape` jest typu `Circle`, `Section` czy `Triangle` i wypisywać dla jakiego obiektu została zawołana.
     - W implementacji użyć instrukcji `switch` z wykorzystaniem pattern matching (konstrukcja z Javy 17)
-14.  Napisać testy jednostkowe do stworzonych klas
+14. Napisać testy jednostkowe do stworzonych klas
+
+
+# Testy:
+
+1.Zostały zasetupowanie z pomocą JUnit5, AssertJ.
+
+2.Aby uruchomić pełną suitę testów jednostkowych należy uzyć komendy: `mvn clean test`
+Kod powinien uruchomić się w trybie --enable-preview (dzięki konfiguracji w pom.xml)
