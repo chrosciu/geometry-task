@@ -31,10 +31,10 @@ public class CircleTest {
     @DisplayName("Circle point is null - thrown exception")
     void shouldThrowIllegalStateExceptionWhenPointIsNull() {
 
-        final String expectedMsg = "Point mustn't be null.";
-        Exception exception = assertThrows(IllegalStateException.class,
+        final String expectedMsg = "Incorrect constructor parameters.";
+        Exception exception = assertThrows(IllegalArgumentException.class,
                 () -> {
-                    new Circle(null, radius).getArea();
+                    new Circle(null, radius);
                 });
         assertThat(exception.getMessage())
                 .isEqualTo(expectedMsg);

@@ -1,24 +1,9 @@
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Arrays;
 
 public non-sealed class Section extends Polygon {
-    @Getter
-    @Setter
-    private Point point1;
 
-    @Getter
-    @Setter
-    private Point point2;
-
-    @Getter
-    @Setter
-    private int corners;
-
-
-    public Section(int corners, Point point1, Point point2) {
-        super(corners);
-        this.point1 = point1;
-        this.point2 = point2;
+    public Section(Point point1, Point point2) {
+        super(Arrays.asList(point1, point2));
     }
 
     @Override

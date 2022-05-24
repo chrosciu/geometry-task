@@ -1,9 +1,11 @@
-public abstract sealed class Polygon implements Shape permits Section, Triangle {
-    private int corners;
+import java.util.List;
 
-    public Polygon(int corners) {
-        if (corners <= 0)
-            throw new IllegalArgumentException("Corners must be of positive number.");
+public abstract sealed class Polygon implements Shape permits Section, Triangle {
+    private List<Point> corners;
+
+    public Polygon(List<Point> corners) {
+        if (corners.size() <= 0)
+            throw new IllegalArgumentException("Polygon must have corners.");
         this.corners = corners;
     }
 }
