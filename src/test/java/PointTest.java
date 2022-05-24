@@ -10,11 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Slf4j
 public class PointTest {
 
-    @BeforeAll
-    static void setupMsg() {
-        log.info("Set up for {} tests.", Point.class);
-    }
-
     @Test
     @DisplayName("Point: calculate distance - positive")
     void shouldCalculateDistance() {
@@ -49,10 +44,5 @@ public class PointTest {
 
         assertThat(exception.getMessage())
                 .isEqualTo(expectedMsg);
-    }
-
-    @AfterAll
-    static void afterTestMsg() {
-        log.info("Tests for {} completed.", Point.class);
     }
 }

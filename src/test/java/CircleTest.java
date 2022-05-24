@@ -12,11 +12,6 @@ public class CircleTest {
     final static double radius = Math.ceil(Math.random() * 50);
     final static Point point = new Point(3.0, 6.4);
 
-    @BeforeAll
-    static void setupMsg() {
-        log.info("Set up for {} tests.", Circle.class);
-    }
-
     @Test
     @DisplayName("Calculate Circle area - positive")
     void shouldCalculateAraForPositiveRadius() {
@@ -46,10 +41,5 @@ public class CircleTest {
         final String expectedMsg = "radius equal 0";
         assertThat(new Circle(point, 0).getArea())
                 .contains(expectedMsg);
-    }
-
-    @AfterAll
-    static void afterTestMsg() {
-        log.info("Test for {} completed.", Circle.class);
     }
 }

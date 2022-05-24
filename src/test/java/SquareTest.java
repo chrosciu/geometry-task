@@ -11,11 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Slf4j
 public class SquareTest {
 
-    @BeforeAll
-    static void setupMsg() {
-        log.info("Set up for {} tests.", Square.class);
-    }
-
     @Test
     @DisplayName("Square create - positive")
     void shouldCreateSquareOfPositiveSide() {
@@ -31,10 +26,5 @@ public class SquareTest {
         Exception exception = assertThrows(IllegalArgumentException.class,
                 () -> new Square(negativeSide));
         assertThat(exception.getMessage()).isEqualTo(expectedMsg);
-    }
-
-    @AfterAll
-    static void afterTestMsg() {
-        log.info("Test for {} completed.", Square.class);
     }
 }

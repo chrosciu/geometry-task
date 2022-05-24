@@ -10,11 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Slf4j
 public class TriangleTest {
 
-    @BeforeAll
-    static void setupMsg() {
-        log.info("Set up for {} tests.", Triangle.class);
-    }
-
     @Test
     @DisplayName("Polygon creation - positive path")
     void shouldCreatePolygonInstance() {
@@ -38,10 +33,5 @@ public class TriangleTest {
                         .caseWhenGivenSidesAreIncorrect());
 
         assertThat(exception.getMessage()).isEqualTo(expectedMsg);
-    }
-
-    @AfterAll
-    static void afterTestMsg() {
-        log.info("Test for {} completed.", Triangle.class);
     }
 }
