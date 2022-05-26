@@ -1,4 +1,3 @@
-
 public non-sealed class Triangle extends Polygon {
     final Point a;
     final Point b;

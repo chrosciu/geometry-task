@@ -1,4 +1,3 @@
-
 public record Circle(Point p, double radius) implements Shape {
 
     public Circle {
