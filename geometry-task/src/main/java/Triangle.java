@@ -5,14 +5,16 @@ public non-sealed class Triangle extends Polygon {
     final Point c;
 
     public Triangle(Point a, Point b, Point c) {
-        System.out.printf("Creating triangle object");
-
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    Point getA() { return a; }
-    Point getB() { return b; }
-    Point getC() { return c; }
+    public String toString() {
+        return String.format("Triangle(a = %s, b = %s, c = %s)", a, b, c);
+    }
+
+    public Point getA() { return a; }
+    public Point getB() { return b; }
+    public Point getC() { return c; }
 }
