@@ -29,7 +29,7 @@ public class SectionTest {
 
         String diameter = section.getDiameter();
 
-        Assertions.assertEquals("getDiameter() invoked for class Section", diameter);
+        Assertions.assertEquals("getDiameter() invoked for class Section(a = Point[x=99.1, y=109.2], b = Point[x=119.1, y=129.2])", diameter);
     }
 
 }

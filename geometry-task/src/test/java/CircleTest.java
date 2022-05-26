@@ -39,6 +39,6 @@ public class CircleTest {
 
         String diameter = circle.getDiameter();
 
-        Assertions.assertEquals("getDiameter() invoked for class Circle", diameter);
+        Assertions.assertEquals("getDiameter() invoked for class Circle[p=Point[x=99.1, y=109.2], radius=19.3]", diameter);
     }
 }

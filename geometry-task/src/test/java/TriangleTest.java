@@ -31,6 +31,6 @@ public class TriangleTest {
 
         String diameter = triangle.getDiameter();
 
-        Assertions.assertEquals("getDiameter() invoked for class Triangle", diameter);
+        Assertions.assertEquals("getDiameter() invoked for class Triangle(a = Point[x=99.1, y=109.2], b = Point[x=119.1, y=129.2], c = Point[x=139.1, y=149.2])", diameter);
     }
 }

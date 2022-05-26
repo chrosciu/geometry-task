@@ -2,14 +2,14 @@ public sealed interface Shape permits Circle, Polygon {
     String getArea();
 
     default String getDiameter() {
-        String retVal = "getDiameter() invoked for class ";
+        String msg = "getDiameter() invoked for class ";
 
-        switch (this.getClass().getSimpleName()) {
-            case "Circle" -> retVal += "Circle";
-            case "Section" -> retVal += "Section";
-            case "Triangle" -> retVal += "Triangle";
+        switch (this) {
+            case Circle c -> msg += c;
+            case Section s -> msg += s;
+            case Triangle t -> msg += t;
         }
 
-        return retVal;
+        return msg;
     }
 }
